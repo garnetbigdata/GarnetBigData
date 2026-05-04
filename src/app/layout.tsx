@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Script from "next/script"; // new added
+import { GoogleAnalytics } from '@next/third-parties/google' // new import
 
 export const metadata: Metadata = {
   title: "Garnet Big Data",
@@ -48,6 +49,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <GoogleAnalytics gaId="G-53GEJZXRMD" />
       </body>
     </html>
   );
