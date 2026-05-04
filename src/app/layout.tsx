@@ -3,7 +3,6 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Script from "next/script"; // new added
-import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   title: "Garnet Big Data",
@@ -36,12 +35,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/*  Inject the JSON-LD script */}
+        {/* Organization Schema */}
         <Script
           id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        
+        {/* Google Analytics - No installation required */}
+        <Script 
+          src="https://www.googletagmanager.com/gtag/js?id=G-53GEJZXRMD" 
+          strategy="afterInteractive" 
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-53GEJZXRMD');
+          `}
+        </Script>
       </head>
       <body className="bg-white overflow-x-hidden flex flex-col min-h-screen">
         <Header />
@@ -49,7 +62,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <GoogleAnalytics gaId="G-53GEJZXRMD" />
       </body>
     </html>
   );
