@@ -6,6 +6,9 @@ import Footer from "./components/Footer";
 export const metadata: Metadata = {
   title: "Garnet Big Data",
   description: "Building tomorrow's Data-Driven organization today",
+  verification: {
+    google: '2iCu6TQieaU--3as5AsNBJhviHrlIv2OZrqUc0qoKxE',
+  },
 };
 
 export default function RootLayout({
