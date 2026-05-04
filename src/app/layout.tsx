@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Script from "next/script"; // new added
 
 export const metadata: Metadata = {
   title: "Garnet Big Data",
@@ -11,13 +12,36 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Define Organization schema
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'name': 'Garnet BigData',
+    'url': 'https://www.garnetbigdata.com',
+    'logo': 'https://www.garnetbigdata.com/GARNET5.png',
+    'sameAs': [
+      'https://www.linkedin.com/company/garnet-bigdata',
+      'https://www.instagram.com/garnetbigdata',
+      'https://twitter.com/garnetbigdata'
+    ]
+  };
+
   return (
     <html lang="en">
+      <head>
+        {/*  Inject the JSON-LD script */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="bg-white overflow-x-hidden flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
@@ -27,4 +51,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-} 
+}
