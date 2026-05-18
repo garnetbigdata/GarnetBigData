@@ -30,7 +30,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl font-bold text-slate-800 mb-3">Our Vision</h2>
             <p className="text-slate-600 leading-relaxed">
-              To be the premier architecture and data consulting ally, recognized for pioneering pathways that seamlessly link raw technical data assets with high-level corporate strategy.
+              To be the be the premier architecture and data consulting ally, recognized for pioneering pathways that seamlessly link raw technical data assets with high-level corporate strategy.
             </p>
           </div>
         </div>
@@ -44,7 +44,6 @@ export default function AboutPage() {
             {/* Founder 1: Oluwatoyin Oyedele */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start border-t border-slate-100 pt-12">
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                {/* Once you upload Toyin's photo to your public directory, update this src attribute (e.g. /toyin.png) */}
                 <div className="w-56 h-56 rounded-2xl overflow-hidden bg-slate-100 shadow-md border border-slate-200">
                   <img src="/toyin_about_page.jfif" alt="Oluwatoyin Oyedele" className="w-full h-full object-cover" />
                 </div>   
@@ -64,10 +63,9 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Founder 2: Ruby Abuye */}
+            {/* Founder 2: Ruby Abuye-Samuel */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start border-t border-slate-100 pt-12">
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                {/* Once you upload Ruby's photo to your public directory, update this src attribute (e.g. /ruby.png) */}
                 <div className="w-56 h-56 rounded-2xl overflow-hidden bg-slate-100 shadow-md border border-slate-200">
                   <img src="/ruby_about_page.png" alt="Ruby Abuye" className="w-full h-full object-cover" />
                 </div>
@@ -90,14 +88,17 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Testimonials Placeholder */}
-{/*
-<div className="border-t border-slate-100 mt-20 pt-16 text-center">
-  <h2 className="text-2xl font-bold text-slate-400 mb-4">
-    Client Testimonials
-  </h2>
-  <p className="text-slate-400 italic max-w-md mx-auto text-sm">
-    What our strategic partners say. Success metrics and case endorsements launching soon.
-  </p>
-</div>
-*/}
+        {/* Cleaned Testimonials Placeholder Section */}
+        <div className="border-t border-slate-100 mt-20 pt-16 text-center">
+          <h2 className="text-2xl font-bold text-slate-400 mb-4">
+            Client Testimonials
+          </h2>
+          <p className="text-slate-400 italic max-w-md mx-auto text-sm">
+            What our strategic partners say. Success metrics and case endorsements launching soon.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  );
+}
