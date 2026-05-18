@@ -28,7 +28,7 @@ export default function RootLayout({
     'sameAs': [
       'https://www.linkedin.com/company/garnet-bigdata',
       'https://www.instagram.com/garnetbigdata',
-      'https://twitter.com/garnetbigdata'
+      'https://twitter.com/garnetbigdata',
       'https://medium.com/@garnetbigdata'
     ]
   };
