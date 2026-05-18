@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold text-red-200 mb-4">Resources</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a target='_blank' href="https://medium.com/@garnetbigdata" className="hover:text-white transition-colors duration-200">Blog</a></li>
+              <li><a target='_blank' href="https://medium.com/@garnetbigdata" rel="me" className="hover:text-white transition-colors duration-200">Blog</a></li>
               <li><a href="/resources#webinars-events" className="hover:text-white transition-colors duration-200">Webinars</a></li>
             </ul>
             
@@ -35,6 +35,7 @@ const Footer: React.FC = () => {
               <div className="flex space-x-4">
                 <a target='_blank'
                   href="https://twitter.com/garnetbigdata" 
+                  rel="me"
                   className="text-gray-400 hover:text-red-200 transition-colors duration-300"
                   aria-label="Follow us on Twitter"
                 >
@@ -42,6 +43,7 @@ const Footer: React.FC = () => {
                 </a>
                 <a target='_blank'
                   href="https://instagram.com/garnetbigdata" 
+                  rel="me"
                   className="text-gray-400 hover:text-red-200 transition-colors duration-300"
                   aria-label="Follow us on Instagram"
                 >
@@ -49,6 +51,7 @@ const Footer: React.FC = () => {
                 </a>
                 <a target='_blank'
                   href="https://www.linkedin.com/company/garnet-bigdata" 
+                  rel="me"
                   className="text-gray-400 hover:text-red-200 transition-colors duration-300"
                   aria-label="Connect with us on LinkedIn"
                 >
