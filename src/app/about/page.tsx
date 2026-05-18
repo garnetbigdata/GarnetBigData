@@ -7,48 +7,63 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="bg-white min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <div className="relative isolate bg-gradient-to-br from-red-50/50 via-white to-blue-50/50 min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden font-sans">
+      
+      {/* Brand Background Grid Element */}
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-60" />
+
+      {/* Brand Background Ambient Radial Glow */}
+      <div className="absolute inset-0 -z-10 flex items-center justify-center opacity-30">
+        <div className="w-[800px] h-[800px] bg-radial from-red-200/40 via-transparent to-transparent blur-3xl animate-pulse" />
+      </div>
+
+      <div className="max-w-5xl mx-auto relative">
+        
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl tracking-tight mb-4">
+        <div className="text-center mb-20">
+          <span className="text-xs font-semibold tracking-wider uppercase text-red-800 bg-red-50 px-3 py-1.5 rounded-full border border-red-100 shadow-sm">
+            Our Journey
+          </span>
+          <h1 className="text-4xl font-extrabold text-slate-900 sm:text-5xl tracking-tight mt-4 mb-6 bg-gradient-to-r from-slate-900 via-red-950 to-slate-900 bg-clip-text text-transparent">
             About Garnet BigData
           </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
             Building tomorrow's Data-Driven organization today.
           </p>
         </div>
 
         {/* Mission & Vision Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 bg-slate-50 p-8 rounded-2xl">
-          <div>
+        <div className="mb-24 max-w-3xl mx-auto">
+          <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-slate-100 shadow-xl shadow-slate-100/50 relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-slate-200/50 group">
+            <div className="absolute top-0 left-0 w-2 h-full bg-red-800 transition-all duration-300 group-hover:w-3" />
+            <span className="text-xs font-bold uppercase tracking-widest text-red-800 block mb-2">
+              The Framework
             <h2 className="text-2xl font-bold text-slate-800 mb-3">Our Mission</h2>
-            <p className="text-slate-600 leading-relaxed">
+            <p className="text-slate-600 leading-relaxed text-lg">
               To empower organizations across Nigeria and Africa by transforming complex data landscapes into clear, actionable, and competitive business advantages.
             </p>
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-slate-800 mb-3">Our Vision</h2>
-            <p className="text-slate-600 leading-relaxed">
-              To be the be the premier architecture and data consulting ally, recognized for pioneering pathways that seamlessly link raw technical data assets with high-level corporate strategy.
-            </p>
-          </div>
-        </div>
-
-        {/* Founder Section */}
-        <div className="border-t border-slate-100 pt-16">
-          <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Meet the Founders</h2>
           
-          <div className="space-y-20">
+        {/* Founder Section */}
+        <div className="border-t border-slate-200/60 pt-20">
+          <div className="text-center mb-16">
+            <span className="text-xs font-semibold tracking-wider uppercase text-red-800 bg-red-50 px-3 py-1.5 rounded-full border border-red-100 shadow-sm">
+              Leadership
+            </span>
+            <h2 className="text-3xl font-extrabold text-slate-900 mt-3">Meet the Founders</h2>
+          </div>
+          
+          <div className="space-y-16">
 
             {/* Founder 1: Oluwatoyin Oyedele */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start border-t border-slate-100 pt-12">
+            <div className="bg-white/70 backdrop-blur-md grid grid-cols-1 md:grid-cols-3 gap-8 items-start p-8 rounded-2xl border border-slate-100 shadow-lg shadow-slate-100/40 transition-all duration-300 hover:shadow-xl hover:bg-white">
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                <div className="w-56 h-56 rounded-2xl overflow-hidden bg-slate-100 shadow-md border border-slate-200">
-                  <img src="/toyin_about_page.jfif" alt="Oluwatoyin Oyedele" className="w-full h-full object-cover" />
+                <div className="w-48 h-48 rounded-2xl overflow-hidden bg-slate-50 shadow-md border border-slate-100 ring-4 ring-white transition-transform duration-300 hover:scale-[1.02]">
+                  <img src="/toyin_about_page.jpeg" alt="Oluwatoyin Oyedele" className="w-full h-full object-cover" />
                 </div>   
-                <h3 className="mt-4 text-xl font-bold text-slate-900">Oluwatoyin Oyedele</h3>
-                <p className="text-blue-600 font-medium text-sm">Co-Founder & Lead Data Strategist</p>
+                <h3 className="mt-5 text-xl font-bold text-slate-900">Oluwatoyin Oyedele</h3>
+                <p className="text-red-800 font-semibold text-sm tracking-wide mt-1">Co-Founder & Lead Data Strategist</p>
               </div>
               <div className="md:col-span-2 space-y-4">
                 <p className="text-slate-600 leading-relaxed">
@@ -64,13 +79,13 @@ export default function AboutPage() {
             </div>
 
             {/* Founder 2: Ruby Abuye-Samuel */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start border-t border-slate-100 pt-12">
+            <div className="bg-white/70 backdrop-blur-md grid grid-cols-1 md:grid-cols-3 gap-8 items-start p-8 rounded-2xl border border-slate-100 shadow-lg shadow-slate-100/40 transition-all duration-300 hover:shadow-xl hover:bg-white">
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                <div className="w-56 h-56 rounded-2xl overflow-hidden bg-slate-100 shadow-md border border-slate-200">
+                <div className="w-48 h-48 rounded-2xl overflow-hidden bg-slate-50 shadow-md border border-slate-100 ring-4 ring-white transition-transform duration-300 hover:scale-[1.02]">
                   <img src="/ruby_about_page.png" alt="Ruby Abuye" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="mt-4 text-xl font-bold text-slate-900">Ruby Abuye-Samuel</h3>
-                <p className="text-blue-600 font-medium text-sm">Co-Founder & Chief Technology Officer</p>
+                <h3 className="mt-5 text-xl font-bold text-slate-900">Ruby Abuye-Samuel</h3>
+                <p className="text-red-800 font-semibold text-sm tracking-wide mt-1">Co-Founder & Chief Technology Officer</p>
               </div>
               <div className="md:col-span-2 space-y-4">
                 <p className="text-slate-600 leading-relaxed">
@@ -86,16 +101,6 @@ export default function AboutPage() {
             </div>
 
           </div>
-        </div>
-
-        {/* Cleaned Testimonials Placeholder Section */}
-        <div className="border-t border-slate-100 mt-20 pt-16 text-center">
-          <h2 className="text-2xl font-bold text-slate-400 mb-4">
-            Client Testimonials
-          </h2>
-          <p className="text-slate-400 italic max-w-md mx-auto text-sm">
-            What our strategic partners say. Success metrics and case endorsements launching soon.
-          </p>
         </div>
 
       </div>
