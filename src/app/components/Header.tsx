@@ -160,6 +160,7 @@ const Header = () => {
             <Link href="/services" className="text-gray-700 hover:text-red-800">Services</Link>
             <Link href="/caseStudy" className="text-gray-700 hover:text-red-800">Case Studies</Link>
             <Link href="/resources" className="text-gray-700 hover:text-red-800">Resources</Link>
+            <Link href="/about" className="text-gray-700 hover:text-red-800">About</Link>
           </nav>
           <Link href="/contact" className="hidden md:inline-block bg-red-800 text-white px-4 lg:px-5 py-2 rounded-lg hover:bg-red-600 transition">
             Contact Us
@@ -326,6 +327,18 @@ const Header = () => {
               )}
             </AnimatePresence>
           </div>
+
+          {/* About Link */}
+          <Link
+            href="/about"
+            className={`relative whitespace-nowrap ${
+              pathname === '/about'
+                ? "text-red-800 font-semibold"
+                : "text-gray-700 hover:text-red-800"
+            }`}
+          >
+            <span className="hover-underline">About</span>
+          </Link>
         </nav>
 
         <Link
@@ -525,6 +538,19 @@ const Header = () => {
                 </AnimatePresence>
               </div>
 
+              {/* Mobile About Link */}
+              <Link
+                href="/about"
+                className={`${
+                  pathname === '/about'
+                    ? "text-red-800 font-semibold"
+                    : "text-gray-700 hover:text-red-800"
+                }`}
+                onClick={() => setMobileOpen(false)}
+              >
+                About
+              </Link>
+              
               <Link
                 href="/contact"
                 className="mt-4 inline-block bg-red-800 text-white px-4 py-2 rounded-md text-center"
