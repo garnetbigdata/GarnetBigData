@@ -35,7 +35,7 @@ export default function AboutPage() {
         {/* Founder Section */}
         <div className="border-t border-slate-200/60 pt-20">
           <div className="text-center mb-16">
-            <span className="text-3xl font-semibold tracking-wider uppercase text-red-800 bg-red-50 px-3 py-1.5 rounded-full border border-red-100 shadow-sm">
+            <span className="text-3xl font-bold tracking-widest uppercase text-red-800 bg-red-50 px-3 py-1.5 rounded-full border border-red-100 shadow-sm">
               Meet the Founders
             </span>
           </div>
@@ -46,7 +46,7 @@ export default function AboutPage() {
             <div className="bg-white/70 backdrop-blur-md grid grid-cols-1 md:grid-cols-3 gap-8 items-start p-8 rounded-2xl border border-slate-100 shadow-lg shadow-slate-100/40 transition-all duration-300 hover:shadow-xl hover:bg-white">
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <div className="w-48 h-48 rounded-2xl overflow-hidden bg-slate-50 shadow-md border border-slate-100 ring-4 ring-white transition-transform duration-300 hover:scale-[1.02]">
-                  <img src="/toyin_about_page.png" alt="Oluwatoyin Oyedele" className="w-full h-full object-cover" />
+                  <img src="/toyin_about_pagee.png" alt="Oluwatoyin Oyedele" className="w-full h-full object-cover" />
                 </div>   
                 <h3 className="mt-5 text-xl font-bold text-slate-900">Oluwatoyin Oyedele</h3>
                 <p className="text-red-800 font-semibold text-sm tracking-wide mt-1">Co-Founder & Lead Data Strategist</p>
@@ -56,7 +56,7 @@ export default function AboutPage() {
                   Toyin leads data strategy at Garnet Big Data, where she specializes in translating complex business problems into dashboards that executives actually use. Her superpower lies in making highly technical work entirely understandable to non-technical audiences, allowing business leaders to move quickly and act decisively on data.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  Before founding Garnet, Toyin worked across various multinational operations, including Leadway—one of Nigeria's largest insurance groups—where she oversaw data strategy, team performance, and critical executive analytical systems. Notably, she architected the company's shift to a cloud-based ELT reporting stack on Microsoft Fabric and Azure Databricks, granting leadership immediate access to business-critical insights. 
+                  Before founding Garnet, Toyin worked across various multinational operations, including Leadway, one of Nigeria's largest insurance groups, where she oversaw data strategy, team performance, and critical executive analytical systems. Notably, she architected the company's shift to a cloud-based ELT reporting stack on Microsoft Fabric and Azure Databricks, granting leadership immediate access to business-critical insights. 
                 </p>
                 <p className="text-slate-600 leading-relaxed">
                   With a technical footprint spanning insurance, fintech, and education, she has successfully trained over 100+ developers in Python and analytics systems. She thrives in fast-paced, high-impact remote environments where business intelligence drives core strategic decisions.
