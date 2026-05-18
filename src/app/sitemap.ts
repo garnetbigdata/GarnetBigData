@@ -24,6 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://www.garnetbigdata.com/contact', //  Contact us page
       lastModified: new Date(),
     },
+    {
+      url: 'https://www.garnetbigdata.com/about',
+      lastModified: new Date(),
+    },
     // url: 'https://www.garnetbigdata.com/about', // proposed 'About' page
   ]
 }
