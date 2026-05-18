@@ -18,28 +18,14 @@ export default function AboutPage() {
       </div>
 
       <div className="max-w-5xl mx-auto relative">
-        
-        {/* Header Section */}
-        <div className="text-center mb-20">
-          <span className="text-xs font-semibold tracking-wider uppercase text-red-800 bg-red-50 px-3 py-1.5 rounded-full border border-red-100 shadow-sm">
-            Our Journey
-          </span>
-          <h1 className="text-4xl font-extrabold text-slate-900 sm:text-5xl tracking-tight mt-4 mb-6 bg-gradient-to-r from-slate-900 via-red-950 to-slate-900 bg-clip-text text-transparent">
-            About Garnet BigData
-          </h1>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
-            Building tomorrow's Data-Driven organization today.
-          </p>
-        </div>
 
-        {/* Mission & Vision Section */}
+        {/* Mission Section */}
         <div className="mb-24 max-w-3xl mx-auto">
           <div className="bg-white/80 backdrop-blur-md p-8 rounded-2xl border border-slate-100 shadow-xl shadow-slate-100/50 relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-slate-200/50 group">
             <div className="absolute top-0 left-0 w-2 h-full bg-red-800 transition-all duration-300 group-hover:w-3" />
-            <span className="text-xs font-bold uppercase tracking-widest text-red-800 block mb-2">
-              The Framework
+            <span className="text-2xl font-bold uppercase tracking-widest text-red-800 block mb-2">
+              Our Mission
             </span>
-            <h2 className="text-2xl font-bold text-slate-800 mb-3">Our Mission</h2>
             <p className="text-slate-600 leading-relaxed text-lg">
               To empower organizations across Nigeria and Africa by transforming complex data landscapes into clear, actionable, and competitive business advantages.
             </p>
@@ -49,10 +35,9 @@ export default function AboutPage() {
         {/* Founder Section */}
         <div className="border-t border-slate-200/60 pt-20">
           <div className="text-center mb-16">
-            <span className="text-xs font-semibold tracking-wider uppercase text-red-800 bg-red-50 px-3 py-1.5 rounded-full border border-red-100 shadow-sm">
-              Leadership
+            <span className="text-3xl font-semibold tracking-wider uppercase text-red-800 bg-red-50 px-3 py-1.5 rounded-full border border-red-100 shadow-sm">
+              Meet the Founders
             </span>
-            <h2 className="text-3xl font-extrabold text-slate-900 mt-3">Meet the Founders</h2>
           </div>
           
           <div className="space-y-16">
@@ -61,7 +46,7 @@ export default function AboutPage() {
             <div className="bg-white/70 backdrop-blur-md grid grid-cols-1 md:grid-cols-3 gap-8 items-start p-8 rounded-2xl border border-slate-100 shadow-lg shadow-slate-100/40 transition-all duration-300 hover:shadow-xl hover:bg-white">
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <div className="w-48 h-48 rounded-2xl overflow-hidden bg-slate-50 shadow-md border border-slate-100 ring-4 ring-white transition-transform duration-300 hover:scale-[1.02]">
-                  <img src="/toyin_about_page.jpeg" alt="Oluwatoyin Oyedele" className="w-full h-full object-cover" />
+                  <img src="/toyin_about_page.png" alt="Oluwatoyin Oyedele" className="w-full h-full object-cover" />
                 </div>   
                 <h3 className="mt-5 text-xl font-bold text-slate-900">Oluwatoyin Oyedele</h3>
                 <p className="text-red-800 font-semibold text-sm tracking-wide mt-1">Co-Founder & Lead Data Strategist</p>
