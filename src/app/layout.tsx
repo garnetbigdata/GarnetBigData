@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Garnet Big Data"
       }
-    ]
+    ],
     type: "website",
   },
 };
