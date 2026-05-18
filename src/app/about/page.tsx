@@ -38,12 +38,13 @@ export default function AboutPage() {
             <div className="absolute top-0 left-0 w-2 h-full bg-red-800 transition-all duration-300 group-hover:w-3" />
             <span className="text-xs font-bold uppercase tracking-widest text-red-800 block mb-2">
               The Framework
+            </span>
             <h2 className="text-2xl font-bold text-slate-800 mb-3">Our Mission</h2>
             <p className="text-slate-600 leading-relaxed text-lg">
               To empower organizations across Nigeria and Africa by transforming complex data landscapes into clear, actionable, and competitive business advantages.
             </p>
           </div>
-          <div>
+        </div>
           
         {/* Founder Section */}
         <div className="border-t border-slate-200/60 pt-20">
