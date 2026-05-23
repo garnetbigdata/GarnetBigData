@@ -22,6 +22,7 @@ const caseStudyDropdown = [
   { href: "/caseStudy#Revenue-Tracker", label: "Revenue Tracker" },
   { href: "/caseStudy#DataQualityOverhaul", label: "Data Quality Overhaul" },
   { href: "/caseStudy#BuildingaData-drivenCulture", label: "Building a Data-driven Culture" },
+  { href: "/caseStudy/fashion", label: "Fashion" },
 ];
 
 const resourcesDropdown = [
