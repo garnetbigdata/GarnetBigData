@@ -124,7 +124,7 @@ export default function AboutContent() {
               mission
             </motion.span>
           </motion.h1>
-          <motion.p variants={fadeUp} className="mx-auto mt-8 max-w-3xl text-sm font-medium leading-7 text-gray-400 md:text-base">
+          <motion.p variants={fadeUp} className="mx-auto mt-8 max-w-3xl text-sm md:text-md text-gray-400">
             To empower organizations across Nigeria and Africa by transforming complex data landscapes into clear, actionable, and competitive business advantages.
           </motion.p>
         </motion.div>
@@ -132,24 +132,11 @@ export default function AboutContent() {
 
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <motion.div
-            className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-120px" }}
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.1 } },
-            }}
-          >
-            <motion.div variants={fadeUp}>
-              <p className="text-sm font-bold uppercase tracking-[0.24em] text-red-800">Meet the founders</p>
-              <h2 className="mt-4 text-3xl font-black tracking-normal text-slate-950 sm:text-5xl">Strategy and engineering, under one roof.</h2>
-            </motion.div>
-            <motion.p variants={fadeUp} className="max-w-xl text-base leading-7 text-slate-600">
-              Garnet is led by operators who have built executive dashboards, cloud data systems, and AI products across regulated and high-growth environments.
-            </motion.p>
-          </motion.div>
+          <div className="text-center mb-16">
+            <span className="text-3xl font-bold tracking-widest uppercase text-red-800 bg-red-50 px-3 py-1.5 rounded-full border border-red-100 shadow-sm">
+              Meet the Founders
+            </span>
+          </div>
 
           <div className="space-y-8">
             {founders.map((founder, index) => (
@@ -178,7 +165,7 @@ export default function AboutContent() {
                   </motion.div>
                   <div className="mt-5">
                     <h3 className="text-2xl font-black text-slate-950">{founder.name}</h3>
-                    <p className="mt-2 text-sm font-bold uppercase tracking-[0.14em] text-red-800">{founder.role}</p>
+                    <p className="mt-2 text-sm font-bold uppercase text-red-800">{founder.role}</p>
                   </div>
                   <div className="mt-5 flex flex-wrap gap-2">
                     {founder.highlights.map((highlight) => (
@@ -190,7 +177,7 @@ export default function AboutContent() {
                 </div>
 
                 <div className="flex flex-col justify-center">
-                  <div className="space-y-5 text-base leading-8 text-slate-600">
+                  <div className="space-y-5 text-base md:text-lg text-gray-500">
                     {founder.bio.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}

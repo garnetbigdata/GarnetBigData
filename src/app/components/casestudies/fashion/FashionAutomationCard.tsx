@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Bell, Bot, Check, Gauge, RefreshCw, UploadCloud } from "lucide-react";
+import { Bot, Check } from "lucide-react";
+import LottieAnimation from "@/app/components/services/LottieAnimation";
 import { itemVariants } from "./animationVariants";
 import { automationBenefits } from "./fashionData";
 
@@ -46,22 +47,12 @@ const FashionAutomationCard = () => {
         </div>
 
         <div className="flex flex-col items-center text-center">
-          <div className="relative flex h-48 w-48 items-center justify-center rounded-full bg-emerald-400/15 text-red-800">
-            <motion.div
-              className="absolute h-36 w-36 rounded-full border-[20px] border-emerald-400 border-l-transparent"
-              animate={{ rotate: 360 }}
-              transition={{
-                duration: 12,
-                repeat: Infinity,
-                ease: "linear",
-              }}
+          <div className="relative flex size-96 items-center justify-center">
+            <LottieAnimation
+              src="/animations/chart.json"
+              title="Automated chart animation"
+              className="h-full w-full"
             />
-            <div className="relative z-10 grid grid-cols-2 gap-3">
-              <UploadCloud className="h-9 w-9" />
-              <Bell className="h-9 w-9" />
-              <RefreshCw className="h-9 w-9" />
-              <Gauge className="h-9 w-9" />
-            </div>
           </div>
         </div>
       </div>

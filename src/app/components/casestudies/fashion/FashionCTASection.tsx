@@ -31,7 +31,7 @@ const FashionCTASection = () => {
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className="mx-auto mt-5 max-w-xl text-sm font-semibold leading-6 text-gray-600 sm:text-base"
+          className="mx-auto mt-5 max-w-xl text-gray-600"
         >
           Most fashion brands run on intuition until it's too late. The ones
           that scale run on data. Let's build your dashboards.
@@ -41,36 +41,8 @@ const FashionCTASection = () => {
             href="/contact"
             className="inline-flex items-center justify-center bg-red-800 text-white px-4 lg:px-5 py-2 rounded-lg hover:bg-red-600 transition whitespace-nowrap text-sm lg:text-base"
           >
-            Get Started - Book A Call
+            Book A Call
           </Link>
-        </motion.div>
-
-        <motion.div variants={itemVariants} className="mx-auto mt-10 max-w-sm">
-          <svg className="h-28 w-full" viewBox="0 0 360 120" aria-hidden="true">
-            <path
-              d="M24 92 L78 70 L126 82 L170 38 L224 66 L284 30 L336 48"
-              fill="none"
-              stroke="#e5c1bc"
-              strokeWidth="4"
-            />
-            {[24, 78, 126, 170, 224, 284, 336].map((x, index) => {
-              const y = [92, 70, 82, 38, 66, 30, 48][index];
-              return (
-                <g key={x}>
-                  <circle
-                    cx={x}
-                    cy={y}
-                    r={index === 5 ? 10 : 5}
-                    fill={index === 5 ? "#d9a39c" : "#fff"}
-                    stroke="#991b1b"
-                    strokeOpacity="0.45"
-                    strokeWidth="3"
-                  />
-                  <circle cx={x} cy={y} r="2" fill="#991b1b" />
-                </g>
-              );
-            })}
-          </svg>
         </motion.div>
       </motion.div>
     </section>

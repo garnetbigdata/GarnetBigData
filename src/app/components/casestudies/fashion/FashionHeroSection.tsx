@@ -1,17 +1,17 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { LineChart } from "lucide-react";
 import AnimatedBlobs from "@/app/components/services/AnimatedBlobs";
 import DecorativeDots from "@/app/components/services/DecorativeDots";
+import LottieAnimation from "@/app/components/services/LottieAnimation";
 import { containerVariants, itemVariants } from "./animationVariants";
 
 const FashionHeroSection = () => {
   return (
     <div className="relative overflow-hidden">
-      <div className="bg-gradient-to-b from-white to-[#FFF1EE] pb-10">
+      <div className="bg-gradient-to-b from-white to-[#FFF1EE] pb-24">
         <DecorativeDots />
 
         <motion.section
@@ -48,47 +48,76 @@ const FashionHeroSection = () => {
             </motion.p>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="mx-auto mt-8 h-96 w-120">
+          {/* <motion.div
+            variants={itemVariants}
+            className="mx-auto mt-8 h-[420px] w-full max-w-4xl"
+          >
             <div className="relative mx-auto h-full w-full rounded-md border border-gray-200 bg-white shadow-xl shadow-red-900/10">
               <svg
                 className="absolute inset-0 h-full w-full"
-                viewBox="0 0 256 160"
+                viewBox="0 0 720 320"
                 role="img"
                 aria-label="Unclear fashion sales chart"
               >
+                {[70, 130, 190, 250].map((y) => (
+                  <path
+                    key={y}
+                    d={`M64 ${y} H672`}
+                    stroke="#f1f5f9"
+                    strokeWidth="2"
+                  />
+                ))}
+                {[160, 280, 400, 520, 640].map((x) => (
+                  <path
+                    key={x}
+                    d={`M${x} 36 V276`}
+                    stroke="#f8fafc"
+                    strokeWidth="2"
+                  />
+                ))}
                 <path
-                  d="M22 126 L58 88 L91 104 L126 54 L164 83 L201 39 L235 71"
+                  d="M72 252 L148 162 L230 198 L314 88 L410 148 L520 70 L656 126"
                   fill="none"
                   stroke="#991b1b"
-                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="8"
                 />
                 <path
-                  d="M18 96 L51 110 L83 72 L118 88 L150 42 L193 95 L231 51"
+                  d="M68 190 L144 222 L226 128 L312 164 L396 72 L516 202 L650 106"
                   fill="none"
                   stroke="#94a3b8"
-                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="7"
                 />
                 <path
-                  d="M24 48 L62 68 L98 36 L138 72 L178 48 L224 58"
+                  d="M76 98 L154 126 L250 72 L360 132 L492 96 L648 112"
                   fill="none"
                   stroke="#cbd5e1"
-                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="5"
                 />
-                <path d="M22 132 H238" stroke="#d1d5db" strokeWidth="2" />
-                <path d="M22 18 V132" stroke="#d1d5db" strokeWidth="2" />
+                <path d="M64 276 H672" stroke="#cbd5e1" strokeWidth="4" />
+                <path d="M64 36 V276" stroke="#cbd5e1" strokeWidth="4" />
               </svg>
               <motion.div
-                className="absolute left-1/2 top-1/3 flex -translate-x-1/2 items-center justify-center"
+                className="absolute bottom-0 left-1/2 top-6 flex -translate-x-1/2 items-center justify-center"
                 transition={{
                   duration: 3,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
               >
-                <Image src="/frustrated.png" alt="" width={200} height={200} />
+                <LottieAnimation
+                  src="/animations/office-accountant.json"
+                  title="Office accountant animation"
+                  className="h-72 w-72 sm:h-124 sm:w-124"
+                />
               </motion.div>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div variants={itemVariants} className="mt-8 flex justify-center">
             <Link

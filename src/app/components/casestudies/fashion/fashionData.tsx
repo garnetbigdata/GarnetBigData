@@ -2,6 +2,13 @@
 
 import Image from "next/image";
 import { BarChart3, CalendarDays, PackageSearch, Users } from "lucide-react";
+import type { MetricChart } from "./FashionMetricVisual";
+
+interface FashionMetric {
+  label: string;
+  value?: string;
+  chart: MetricChart;
+}
 
 export const painPoints = [
   {
@@ -60,13 +67,14 @@ export const dashboardCards = [
       "Which styles are trial items?",
     ],
     metrics: [
-      "Revenue by channel",
-      "Revenue $1.29M",
-      "Top products $1.26M",
-      "AOV $17.6K",
-      "AOV $12.99",
-    ],
-    metricsTheme: 'bg-red-800/5'
+      { label: "Revenue by channel", chart: "channel-bars" },
+      { label: "Revenue", value: "$1.29M", chart: "revenue-stack" },
+      { label: "Top products", value: "$1.26M", chart: "product-rank" },
+      { label: "AOV", value: "$17.6K", chart: "aov-gauge" },
+      // { label: "AOV", value: "$12.99", chart: "aov-tiles" },
+    ] satisfies FashionMetric[],
+    metricsTheme: "bg-red-800/5",
+    metricColor: "#991b1b",
   },
   {
     name: "StockPulse",
@@ -79,12 +87,13 @@ export const dashboardCards = [
       "What is trade margin?",
     ],
     metrics: [
-      "Dead stock aging report",
-      "Tries",
-      "True margin",
-      "Stock progress margin",
-    ],
-    metricsTheme: 'bg-teal-800/5'
+      { label: "Dead stock aging report", chart: "aging-bars" },
+      { label: "Inventory count", chart: "tries-funnel" },
+      { label: "True margin", chart: "margin-donut" },
+      { label: "Stock progress margin", chart: "stock-progress" },
+    ] satisfies FashionMetric[],
+    metricsTheme: "bg-teal-800/5",
+    metricColor: "#0f766e",
   },
   {
     name: "ClientIQ",
@@ -93,12 +102,16 @@ export const dashboardCards = [
     theme: "from-pink-800 to-rose-700",
     bullets: [
       "Which channel owns the customer?",
-      "Wholesale accounts?",
-      "Which customer movement?",
-      "Which are risk flags?",
+      "Wholesale accounts",
+      "Automated Inactivity Alerts",
     ],
-    metrics: ["CLV", "Repeat customer ratio", "Churn risk flags"],
-    metricsTheme: 'bg-pink-800/5'
+    metrics: [
+      { label: "CLV", chart: "clv-pyramid" },
+      { label: "Repeat customer ratio", chart: "repeat-cohort" },
+      { label: "Churn risk flags", chart: "risk-matrix" },
+    ] satisfies FashionMetric[],
+    metricsTheme: "bg-pink-800/5",
+    metricColor: "#9d174d",
   },
   {
     name: "SeasonCast",
@@ -106,16 +119,17 @@ export const dashboardCards = [
     icon: CalendarDays,
     theme: "from-orange-800 to-orange-700",
     bullets: [
-      "Eid production quantity?",
-      "Raw yards for forecasting planning?",
-      "What Christmas trend?",
+      "Eid production quantity",
+      "Demand for forecasting planning",
+      "Christmas trend",
     ],
     metrics: [
-      "Eid production quantity 10",
-      "Christmas trend forecasting",
-      "Christmas trend 26",
-    ],
-    metricsTheme: 'bg-orange-800/5'
+      { label: "Eid production quantity 10", chart: "eid-capacity" },
+      { label: "Christmas trend forecast", chart: "season-heatmap" },
+      { label: "Christmas trend 26", chart: "trend-score" },
+    ] satisfies FashionMetric[],
+    metricsTheme: "bg-orange-800/5",
+    metricColor: "#c2410c",
   },
 ];
 

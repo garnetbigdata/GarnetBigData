@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "./animationVariants";
 import FashionAutomationCard from "./FashionAutomationCard";
+import FashionMetricVisual from "./FashionMetricVisual";
 import { dashboardCards } from "./fashionData";
 
 const FashionDashboardSection = () => {
@@ -36,7 +37,16 @@ const FashionDashboardSection = () => {
             className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-2"
           >
             {dashboardCards.map(
-              ({ name, label, icon: Icon, theme, bullets, metrics, metricsTheme }) => (
+              ({
+                name,
+                label,
+                icon: Icon,
+                theme,
+                bullets,
+                metrics,
+                metricsTheme,
+                metricColor,
+              }) => (
                 <motion.article
                   key={name}
                   variants={itemVariants}
@@ -58,7 +68,7 @@ const FashionDashboardSection = () => {
                   </div>
 
                   <div className="p-6">
-                    <ul className="space-y-2 text-sm md:text-md text-gray-600">
+                    <ul className="space-y-2 text-gray-600 font-medium">
                       {bullets.map((bullet) => (
                         <li key={bullet} className="flex gap-2">
                           <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-red-800" />
@@ -70,29 +80,15 @@ const FashionDashboardSection = () => {
                     <div className="mt-6 grid grid-cols-2 gap-3">
                       {metrics.map((metric, index) => (
                         <div
-                          key={metric}
-                          className={`${metrics.length % 2 === 1 && index === metrics.length - 1 ? "col-span-2" : ""} min-h-20 rounded-md bg-gray-50 p-3 text-sm font-bold leading-5 text-gray-600 ${metricsTheme}`}
+                          key={`${metric.label}-${metric.chart}`}
+                          className={`${metrics.length % 2 === 1 && index === metrics.length - 1 ? "col-span-2" : ""} min-h-20 rounded-md bg-gray-50 p-3 text-sm font-bold leading-5 text-gray-600 text-center ${metricsTheme}`}
                         >
-                          <span>{metric}</span>
-                          {index % 2 === 1 ? (
-                            <svg
-                              className="mt-2 h-9 w-full"
-                              viewBox="0 0 100 32"
-                              aria-hidden="true"
-                            >
-                              <path
-                                d="M4 24 L20 18 L34 22 L50 10 L68 16 L84 8 L96 12"
-                                fill="none"
-                                stroke="#991b1b"
-                                strokeWidth="3"
-                              />
-                            </svg>
-                          ) : null}
-                          {name === "StockPulse" && index === 3 ? (
-                            <div className="mt-3 h-8 overflow-hidden rounded-t-full border-8 border-teal-200 border-b-0">
-                              <div className="h-full w-2/3 bg-teal-600" />
-                            </div>
-                          ) : null}
+                          <p>{metric.label}</p>
+                          {"value" in metric ? <p>{metric.value}</p> : null}
+                          <FashionMetricVisual
+                            chart={metric.chart}
+                            color={metricColor}
+                          />
                         </div>
                       ))}
                     </div>
