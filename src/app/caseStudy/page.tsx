@@ -11,13 +11,19 @@ import { caseStudiesData, type CaseStudy } from "../data/caseStudiesData";
 
 // Dynamically import heavy interactive components
 const CaseStudyModal = dynamic(
-  () => import("../components/casestudies/CaseStudyModal").then((mod) => mod.CaseStudyModal),
-  { ssr: false }
+  () =>
+    import("../components/casestudies/CaseStudyModal").then(
+      (mod) => mod.CaseStudyModal,
+    ),
+  { ssr: false },
 );
 
 const ImageZoomModal = dynamic(
-  () => import("../components/casestudies/ImageZoomModal").then((mod) => mod.ImageZoomModal),
-  { ssr: false }
+  () =>
+    import("../components/casestudies/ImageZoomModal").then(
+      (mod) => mod.ImageZoomModal,
+    ),
+  { ssr: false },
 );
 
 // Types
@@ -43,13 +49,14 @@ const CaseStudyPage: React.FC = () => {
   const heroContent = {
     title: "Discover how we help businesses unlock the",
     highlightedText: "power of their data",
-    subtitle: "From foundational data governance to AI-powered automation, we partner with organizations to drive measurable outcomes. Explore how we bring clarity, efficiency, and innovation to complex data challenges.",
+    subtitle:
+      "From foundational data governance to AI-powered automation, we partner with organizations to drive measurable outcomes. Explore how we bring clarity, efficiency, and innovation to complex data challenges.",
   };
 
   return (
     <main className="font-sans text-gray-800 relative overflow-x-hidden">
       <HeroSection {...heroContent} />
-      
+
       <section className="max-w-6xl mx-auto px-6">
         {caseStudiesData.map((study, index) => (
           <CaseStudyCard
@@ -65,15 +72,15 @@ const CaseStudyPage: React.FC = () => {
       </section>
 
       {zoomedImage && (
-       <ImageZoomModal
-  zoomedImage={zoomedImage}
-  onClose={() => setZoomedImage(null)}
-/>
+        <ImageZoomModal
+          zoomedImage={zoomedImage}
+          onClose={() => setZoomedImage(null)}
+        />
       )}
-<CaseStudyModal
-  selectedStudy={selectedStudy}
-  onClose={() => setSelectedStudy(null)}
-/>
+      <CaseStudyModal
+        selectedStudy={selectedStudy}
+        onClose={() => setSelectedStudy(null)}
+      />
     </main>
   );
 };
